@@ -13,7 +13,7 @@ public class Application extends Controller {
         render();
     }
 
-     public static void save() {
+     public static void saveUser() {
         User usuarios= new User('Ivan','secret','userIvan');
         usuarios.save();
         render();
@@ -23,6 +23,24 @@ public class Application extends Controller {
         List<User> allUsers = User.find().fetch();
     }
 
-    
+    public static void saveRol() {
+        Rol rol= new Rol('1','Admin');
+        rol.save();
+        render();
+    }
+
+    public static void findRol() {
+        List<User> allRol = Rol.find().fetch();
+    }
+
+     public static void savePermiso() {
+        Permiso rol= new Permiso('1','Admin');
+        rol.save();
+        render();
+    }
+
+    public static void findPermiso() {
+        List<User> allPermiso = Permiso.find().fetch();
+    }
 
 }
